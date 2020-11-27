@@ -1,0 +1,15 @@
+<h2>Settings</h2>
+<p>NewsAPI.org</p>
+
+<form [formGroup]="apiKeyForm">
+
+    <mat-form-field appearance="fill">
+        <mat-label>Your NewsAPI key</mat-label>
+        <input matInput formControlName="apiKey" placeholder="Your NewsAPI key">
+    </mat-form-field>
+
+    <button mat-raised-button (click)="onAdd()" [disabled]="apiKeyForm.invalid">Add</button>
+</form>
+
+<button mat-raised-button [routerLink]="['/countries']">Back</button>
+<button mat-raised-button [disabled]="apiKeyForm.invalid">Delete</button>

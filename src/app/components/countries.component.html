@@ -1,0 +1,11 @@
+<h2>Countries</h2>
+<button [routerLink]="['/auth']">Back</button>
+
+<mat-nav-list>
+    <mat-list-item *ngFor="let c of countriesList" [routerLink]="['/news', c.code]">
+        <a>{{c.name}}</a>
+        <img [src]="c.flag" alt="no flag found" style="width: 30px;">
+    </mat-list-item>
+ </mat-nav-list>
+
+
