@@ -1,5 +1,5 @@
 <h2>Countries</h2>
-<button [routerLink]="['/auth']">Back</button>
+<button mat-raised-button [routerLink]="['/auth']">Settings</button>
 
 <mat-nav-list>
     <mat-list-item *ngFor="let c of countriesList" [routerLink]="['/news', c.code]">

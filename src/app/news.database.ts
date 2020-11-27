@@ -33,6 +33,10 @@ export class NewsAppDB extends Dexie {
         return this.apiKey.put(apiKey)
     }
 
+    deleteApiKey(apiKey: API_KEY) {
+        return this.apiKey.where('apiKeyId').equals(apiKey.apiKeyId).delete()
+    }
+
     //Countries list collection methods 
     getCountriesList() : Promise<any> {
         return this.countries.toArray()
@@ -40,6 +44,12 @@ export class NewsAppDB extends Dexie {
 
     saveCountriesList(countriesList: COUNTRIES) :Promise<any> {
         return this.countries.put(countriesList)
+    }
+
+
+    //News
+    saveNews(news: NEWS ) {
+        return this.news.put(news)
     }
 
 }

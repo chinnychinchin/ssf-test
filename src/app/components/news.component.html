@@ -1,1 +1,16 @@
-<p>Country: {{country}}</p>
+<div *ngFor="let a of news" style="border: 3px; border-color: black;">
+    <mat-card>
+        <img mat-card-image [src]="a.image" style="width: 200px;">
+        <mat-card-title>{{a.title}}</mat-card-title>
+        <mat-card-title>{{a.author}}</mat-card-title>
+        <mat-card-title>{{a.source}}</mat-card-title>
+        <mat-card-subtitle>{{a.description}}</mat-card-subtitle>
+        <mat-card-content>{{a.content}}</mat-card-content>
+        <a [href]="a.url" target="_blank">{{a.url}}</a>
+        <mat-card-footer>
+            <code>{{a.date}}</code>
+        </mat-card-footer>
+    </mat-card>
+</div>
+
+<button mat-raise-button [routerLink]="['/countries']">Home</button>

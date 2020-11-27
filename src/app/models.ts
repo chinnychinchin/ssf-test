@@ -10,5 +10,6 @@ export interface COUNTRIES {
 
 export interface NEWS {
     news: [],
+    time,
     newsId?: number
 }

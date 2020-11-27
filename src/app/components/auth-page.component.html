@@ -12,4 +12,5 @@
 </form>
 
 <button mat-raised-button [routerLink]="['/countries']">Back</button>
-<button mat-raised-button [disabled]="apiKeyForm.invalid">Delete</button>
+
+<button mat-raised-button [disabled]="apiKeyForm.invalid" (click)="onDelete()">Delete</button>
